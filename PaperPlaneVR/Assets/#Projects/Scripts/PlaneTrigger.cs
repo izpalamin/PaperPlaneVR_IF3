@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class PlaneTrigger : MonoBehaviour
 {
-    [SerializeField] private string tagName;
-
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(tagName))
+        if (other.CompareTag("Avion"))
         {
-            Debug.Log($"{other.name} est passé dans le cerceau ");
+            Debug.Log("L'avion est passé dans le cerceau ");
+            Destroy(gameObject);
+
+            // score ??
         }
     }
 }
