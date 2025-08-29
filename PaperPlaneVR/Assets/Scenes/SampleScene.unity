@@ -6244,7 +6244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 015a2a9bbb32b9841b0edafc13849c90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.47
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 015a2a9bbb32b9841b0edafc13849c90, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6252,7 +6252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 015a2a9bbb32b9841b0edafc13849c90, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.37
+      value: 3.686
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 015a2a9bbb32b9841b0edafc13849c90, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6329,6 +6329,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 015a2a9bbb32b9841b0edafc13849c90, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1055666992}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 015a2a9bbb32b9841b0edafc13849c90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1055666993}
   m_SourcePrefab: {fileID: 100100000, guid: 015a2a9bbb32b9841b0edafc13849c90, type: 3}
 --- !u!1 &1055666987 stripped
 GameObject:
@@ -6425,6 +6428,18 @@ MonoBehaviour:
   MaxThrustSpeed: 200
   MinThrustSpeed: 3
   ThrustFactor: 30
+--- !u!114 &1055666993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055666987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522f03c6e269ba34bbd434b4f48fc3ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1062682290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7986,7 +8001,6 @@ GameObject:
   - component: {fileID: 1338554191}
   - component: {fileID: 1338554190}
   - component: {fileID: 1338554189}
-  - component: {fileID: 1338554188}
   - component: {fileID: 1338554187}
   m_Layer: 0
   m_Name: ground
@@ -8010,25 +8024,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1338554188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338554186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25dc7949f723d2418e063f04437c81b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: 
 --- !u!23 &1338554189
 MeshRenderer:
   m_ObjectHideFlags: 0
