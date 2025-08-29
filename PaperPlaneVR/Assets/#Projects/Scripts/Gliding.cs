@@ -1,21 +1,20 @@
 using Unity.Mathematics;
 using UnityEngine;
- 
+
 public class Gliding : MonoBehaviour
 {
-    public static float BaseThrustSpeed = 30f;
     [SerializeField] private float MaxThrustSpeed;
     [SerializeField] private float MinThrustSpeed;
     [SerializeField] private float ThrustFactor;
-    private float CurrentThrustSpeed = BaseThrustSpeed;
- 
+    private float CurrentThrustSpeed = 0f;
+
     private Rigidbody Rbody;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Rbody = GetComponent<Rigidbody>();
     }
- 
+
     void FixedUpdate()
     {
         GlidingMouvement();
@@ -23,9 +22,9 @@ public class Gliding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+
     }
- 
+
     private void GlidingMouvement()
     {
         float pitchInRads = transform.eulerAngles.x * Mathf.Deg2Rad;
@@ -33,8 +32,13 @@ public class Gliding : MonoBehaviour
         Vector3 glidingForce = Vector3.forward * CurrentThrustSpeed;
         CurrentThrustSpeed += mappedPitch * Time.deltaTime;
         CurrentThrustSpeed = Mathf.Clamp(CurrentThrustSpeed, 0, MaxThrustSpeed);
- 
-        
+
+
         Rbody.AddRelativeForce(glidingForce);
+    }
+
+    public void SetSpeed()
+    {
+        CurrentThrustSpeed = 200f;
     }
 }
